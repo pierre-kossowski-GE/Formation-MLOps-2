@@ -1,4 +1,5 @@
-
+pytest
+vulture
 flake8
 # Data manipulation
 pandas==2.1.4
