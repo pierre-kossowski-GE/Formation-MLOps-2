@@ -6,10 +6,6 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 
 
-def train_model_with_io(features_path: str, model_registry_folder: str) -> None:
-    features = pd.read_parquet(features_path)
-
-    train_model(features, model_registry_folder)
 
 
 def train_model(features: pd.DataFrame, model_registry_folder: str) -> None:
