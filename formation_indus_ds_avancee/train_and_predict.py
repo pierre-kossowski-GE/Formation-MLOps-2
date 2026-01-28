@@ -5,9 +5,6 @@ import joblib
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 
-
-
-
 def train_model(features: pd.DataFrame, model_registry_folder: str) -> None:
     target = 'Ba_avg'
     X = features.drop(columns=[target])
