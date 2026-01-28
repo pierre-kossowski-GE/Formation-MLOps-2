@@ -20,9 +20,9 @@ jobs:
       - name: Install dev dependencies
         run:  pip install -r requirements_test.txt
       - name: Run Linter
-        run:  "Trainee should add command to run flake8"
+        run:  flake8 .
       - name: Run Vulture
-        run:  "Trainee should add command to run vulture"
+        run:  "a completer run vulture"
       - name: Run tests
         run:  "Trainee should add command to run test"
 
