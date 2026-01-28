@@ -26,8 +26,8 @@ jobs:
       - name: Run tests
         run: python -m pytest tests/test_unit
       # Add behave command
-    qualite:
-      steps:
-        - name: pytest fonctionnel
-          run: python -m pytest --cov=formation_indus_ds_avancee/ tests/test_unit/ -vv -p no:warnings
+  qualite:
+    steps:
+      - name: pytest fonctionnel
+        run: python -m pytest --cov=formation_indus_ds_avancee/ tests/test_unit/ -vv -p no:warnings
 
