@@ -22,8 +22,8 @@ jobs:
       - name: Run Linter
         run:  flake8 .
       - name: Run Vulture
-        run:  "a completer run vulture"
+        run:  vulture .
       - name: Run tests
-        run:  "Trainee should add command to run test"
+        run:  pytest .
 
 
