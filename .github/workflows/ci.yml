@@ -27,7 +27,8 @@ jobs:
         run: python -m pytest tests/test_unit
       # Add behave command
   qualite:
+    runs-on: ubuntu-latest
     steps:
-      - name: pytest fonctionnel
+      - name: Run tests
         run: python -m pytest --cov=formation_indus_ds_avancee/ tests/test_unit/ -vv -p no:warnings
 
