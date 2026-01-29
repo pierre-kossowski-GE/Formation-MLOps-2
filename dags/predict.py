@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.dirname(__file__)))) 
 from dags.config import GENERATED_DATA_PATH, DATA_FOLDER, MODEL_PATH, PREDICTIONS_FOLDER
 from formation_indus_ds_avancee.feature_engineering import prepare_features_with_io
 from formation_indus_ds_avancee.train_and_predict import train_model_with_io, predict_with_io
-from formation_indus_ds_avancee.get_data_from_csv import data_generator
+from dags.get_data_from_engie_hub import data_generator
 
 @dag(default_args={'owner': 'airflow'}, schedule=timedelta(minutes=2),
      start_date=pendulum.today('UTC').add(hours=-1))
