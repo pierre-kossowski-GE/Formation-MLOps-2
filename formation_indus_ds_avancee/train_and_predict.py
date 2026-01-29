@@ -21,7 +21,7 @@ def train_model(features: pd.DataFrame, model_registry_folder: str) -> None:
     
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    joblib.dump(model, os.path.join(model_registry_folder+timestamp, 'model.joblib'))
+    joblib.dump(model, os.path.join(model_registry_folder, f'model_{timestamp}.joblib'))
 
 
 def predict_with_io(features_path: str, model_path: str, predictions_folder: str) -> None:
