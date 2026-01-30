@@ -21,6 +21,11 @@ def monitor_with_io(predictions_folder: str, db_con_str: str, monitoring_table_n
 
 def monitor(latest_predictions: pd.DataFrame) -> pd.DataFrame:
     # Start filling function
-    monitoring_df = pd.DataFrame
+    #monitoring_df = pd.DataFrame
+    #to_monitor = latest_predictions.loc[:,['predictions_time','predictions']].mean()
+    #monitoring_df = pd.DataFrame(to_monitor)
+    #monitoring_df = monitoring_df.T
+    #monitoring_df['predictions_time'] = pd.to_datetime(df['predictions_time'].values, format='%Y%m%d-%H%M%S')
+    monitoring_df = latest_predictions.groupby('predictions_time').agg({'predictions': 'mean'}).reset_index()
     # End filling function
     return monitoring_df
